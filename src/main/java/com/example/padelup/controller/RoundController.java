@@ -26,7 +26,7 @@ public class RoundController {
    public ResponseEntity<String> deleteRound(@PathVariable("id") Integer pId) {
 
       boolean delete = roundService.delete(pId);
-      return ResponseEntity.ok(delete ? "Round yer with id " + pId + " was deleted" : "Round Not Deleted");
+      return ResponseEntity.ok(delete ? "Round with id " + pId + " was deleted" : "Round Not Deleted");
    }
    @GetMapping("/{id}")
    public ResponseEntity<RoundDto> findById(@PathVariable("id") Integer id){
